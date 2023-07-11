@@ -410,7 +410,10 @@ class Game
     public function stop(): void
     {
         if ($this->task instanceof Task) {
-            $this->task->getHandler()->cancel();
+            $handler = $this->task->getHandler();
+            if($handler != null) {
+                $this->task->getHandler()->cancel();
+            }
         }
 
         $world = Server::getInstance()->getWorldManager()->getWorldByName($this->arenainfo["worldname"]);
@@ -666,5 +669,6 @@ class Game
     public function setHub(Position $pos): void
     {
         $this->arenainfo["hub"] = $pos;
+        
     }
 }
