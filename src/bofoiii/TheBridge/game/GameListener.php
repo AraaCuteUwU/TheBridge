@@ -32,7 +32,7 @@ class GameListener implements Listener
     public function onQuit(PlayerQuitEvent $event) : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         $this->game->broadcastCustomMessage(TextFormat::RED . $player->getName() . " disconnected!");
@@ -45,7 +45,7 @@ class GameListener implements Listener
     public function onPlace(BlockPlaceEvent $event)  : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         if ($this->game->phase !== Game::PHASE_RUNNING) {
@@ -74,7 +74,7 @@ class GameListener implements Listener
     public function onBreak(BlockBreakEvent $event)  : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         if (isset($this->game->placedblock[Utils::vectorToString($event->getBlock()->getPosition()->asVector3())])) {
@@ -89,7 +89,7 @@ class GameListener implements Listener
     public function onExhaust(PlayerExhaustEvent $event)  : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         $event->cancel();
@@ -114,7 +114,7 @@ class GameListener implements Listener
             return;
         }
 
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         
@@ -135,7 +135,7 @@ class GameListener implements Listener
     public function onChat(PlayerChatEvent $event) : void
     { 
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         $this->game->broadcastMessage($player, $event->getMessage());
@@ -148,7 +148,7 @@ class GameListener implements Listener
     public function onMove(PlayerMoveEvent $event) : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
 
@@ -185,7 +185,7 @@ class GameListener implements Listener
     public function onUse(PlayerItemUseEvent $event) : void
     {
         $player = $event->getPlayer();
-        if(!$this->game->isInGame($player) {
+        if(!$this->game->isInGame($player)) {
            return;
         }
         if ($event->getItem()->getTypeId() == -BlockTypeIds::BED) {
