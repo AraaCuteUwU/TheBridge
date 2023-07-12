@@ -102,6 +102,14 @@ class GameListener implements Listener
     public function onDamage(EntityDamageEvent $event)  : void
     {
         $player = $event->getEntity();
+        if (!$player instanceof Player) {
+            return;
+        }
+
+        if(!$this->game->isInGame($player)) {
+           return;
+        }
+        
         if ($this->game->phase !== Game::PHASE_RUNNING) {
             $event->cancel();
             return;
@@ -109,13 +117,6 @@ class GameListener implements Listener
         if ($event->getCause() == $event::CAUSE_FALL) {
             $event->cancel();
             return;
-        }
-        if (!$player instanceof Player) {
-            return;
-        }
-
-        if(!$this->game->isInGame($player)) {
-           return;
         }
         
         if ($event instanceof EntityDamageByEntityEvent) {
