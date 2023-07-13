@@ -10,7 +10,7 @@ Command | Description | Permission
 `/stb create` | Create new arena. | sthebridge.cmd.set
 `/stb delete` | Delete arena. | sthebridge.cmd.set
 `/stb quit` | Leave from game. | Default
-`/stb join` | Join to game. | Default
+`/stb join` | Join to game. | sthebridge.cmd.join
 `/stb setspawn` | Set position of spawn position a team. | sthebridge.cmd.set
 `/stb setgoal` | Set position of goal a team. | sthebridge.cmd.set
 `/stb setworld` | Set world name of arena. | sthebridge.cmd.set

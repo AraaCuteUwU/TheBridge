@@ -13,6 +13,7 @@ class JoinSubCommand extends BaseSubCommand{
     protected function prepare(): void
     {
         $this->registerArgument(0, new RawStringArgument("arena", false));
+        $this->setPermission("sthebridge.cmd.join");
     }
 
     /**

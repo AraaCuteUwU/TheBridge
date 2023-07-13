@@ -12,7 +12,7 @@ class RandomJoinSubCommand extends BaseSubCommand{
 
     protected function prepare(): void
     {
-        //NOOP
+        $this->setPermission("sthebridge.cmd");
     }
 
     /**
