@@ -14,7 +14,7 @@ class SetGoalSubCommand extends BaseSubCommand{
     {
         $this->registerArgument(0, new RawStringArgument("arena", false));
         $this->registerArgument(1, new RawStringArgument("team", false));
-        $this->setPermission("thebridge.set");
+        $this->setPermission("sthebridge.cmd.set");
     }
 
     /**

@@ -12,7 +12,7 @@ class CreateSubCommand extends BaseSubCommand{
     protected function prepare(): void
     {
         $this->registerArgument(0 ,new RawStringArgument("arena", false));
-        $this->setPermission("thebridge.set");
+        $this->setPermission("sthebridge.cmd.set");
     }
 
     /**

@@ -10,7 +10,7 @@ class ReloadSubCommand extends BaseSubCommand{
 
     protected function prepare(): void
     {
-        $this->setPermission("thebridge.set");
+        $this->setPermission("sthebridge.cmd.set");
     }
 
     /**

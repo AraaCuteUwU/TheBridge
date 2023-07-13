@@ -34,7 +34,7 @@ class TheBridgeCommand extends BaseCommand{
 
     public function getPermission()
     {
-        return "thebridge.permission.cmd";
+        return "sthebridge.cmd";
     }
 
     /**

@@ -7,15 +7,15 @@ The Bridge is a minigame. It is a type of duel which involves 2 teams attempting
 # Commands
 Command | Description | Permission
 --- | --- | ---
-`/tb create` | Create new arena. | thebridge.set
-`/tb delete` | Delete arena. | thebridge.set
-`/tb quit` | Leave from game. | Default
-`/tb join` | Join to game. | Default
-`/tb setspawn` | Set position of spawn position a team. | thebridge.set
-`/tb setgoal` | Set position of goal a team. | thebridge.set
-`/tb setworld` | Set world name of arena. | thebridge.set
-`/tb sethub` | Set hub position. | thebridge.set
-`/tb reload` | Reload all arena. | thebridge.set
+`/stb create` | Create new arena. | sthebridge.cmd.set
+`/stb delete` | Delete arena. | sthebridge.cmd.set
+`/stb quit` | Leave from game. | Default
+`/stb join` | Join to game. | Default
+`/stb setspawn` | Set position of spawn position a team. | sthebridge.cmd.set
+`/stb setgoal` | Set position of goal a team. | sthebridge.cmd.set
+`/stb setworld` | Set world name of arena. | sthebridge.cmd.set
+`/stb sethub` | Set hub position. | sthebridge.cmd.set
+`/stb reload` | Reload all arena. | sthebridge.cmd.set
 
 ## Features
 - [X] All basics of TheBridge game
@@ -27,7 +27,9 @@ Command | Description | Permission
 - [X] Drop item not remove after game
 - [x] Error after player quit int RUNNING and RESTART state
 - [x] Lobby countdown not reset after game restarting
-If you found issue, please open new issue in GitHub repository
+- [x] Differend Display Name and Folder Name HUB not 
+- [x] All event not work if player not in game
+- If you found issue, please open new issue in GitHub repository
 
 
 ## Copyright

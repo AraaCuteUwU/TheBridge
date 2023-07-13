@@ -120,7 +120,7 @@ class Utils{
      * @return string
      */
     public static function PositionToString(Position $position): string{
-        return $position->getX() . ":" . $position->getY() . ":" . $position->getZ() . ":" . $position->getWorld()->getDisplayName();
+        return $position->getX() . ":" . $position->getY() . ":" . $position->getZ() . ":" . $position->getWorld()->getFolderName();
     }
 
     /**
