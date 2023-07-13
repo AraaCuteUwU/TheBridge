@@ -9,3 +9,6 @@ permissions:
     default: true
   sthebridge.cmd.set:
     default: op
+  sthebridge.cmd.join:
+    default: op
+  
